@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ShopController;
@@ -27,6 +28,7 @@ use Illuminate\Support\Facades\Route;
 
     Route::get('/shop', [ShopController::class, 'index'])->name('shop');
     Route::get('/cart', [CartController::class, 'index'])->middleware('auth')->name('cart');
+    Route::get('/checkout', [CheckoutController::class, 'index'])->middleware('auth')->name('checkout');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

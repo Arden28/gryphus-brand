@@ -6,15 +6,15 @@
 <main class="main">
     <div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
         <div class="container">
-            <h1 class="page-title">Wishlist<span>Shop</span></h1>
+            <h1 class="page-title">Liste de souhaits<span>La boutique</span></h1>
         </div><!-- End .container -->
     </div><!-- End .page-header -->
     <nav aria-label="breadcrumb" class="breadcrumb-nav">
         <div class="container">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Shop</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Wishlist</li>
+                <li class="breadcrumb-item"><a href="{{ route('home') }}">Acceuil</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('shop') }}">La boutique</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Liste de souhaits</li>
             </ol>
         </div><!-- End .container -->
     </nav><!-- End .breadcrumb-nav -->
@@ -24,9 +24,9 @@
             <table class="table table-wishlist table-mobile">
                 <thead>
                     <tr>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Stock Status</th>
+                        <th>Produit</th>
+                        <th>Prix</th>
+                        <th>Status du stock</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -48,7 +48,7 @@
                             </div><!-- End .product -->
                         </td>
                         <td class="price-col">$84.00</td>
-                        <td class="stock-col"><span class="in-stock">In stock</span></td>
+                        <td class="stock-col"><span class="in-stock">Disponible</span></td>
                         <td class="action-col">
                             <div class="dropdown">
                             <button class="btn btn-block btn-outline-primary-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -79,7 +79,7 @@
                             </div><!-- End .product -->
                         </td>
                         <td class="price-col">$76.00</td>
-                        <td class="stock-col"><span class="in-stock">In stock</span></td>
+                        <td class="stock-col"><span class="in-stock">Disponible</span></td>
                         <td class="action-col">
                             <button class="btn btn-block btn-outline-primary-2"><i class="icon-cart-plus"></i>Add to Cart</button>
                         </td>
@@ -99,10 +99,10 @@
                                 </h3><!-- End .product-title -->
                             </div><!-- End .product -->
                         </td>
-                        <td class="price-col">$52.00</td>
-                        <td class="stock-col"><span class="out-of-stock">Out of stock</span></td>
+                        <td class="price-col">52.00 €</td>
+                        <td class="stock-col"><span class="out-of-stock">En rupture</span></td>
                         <td class="action-col">
-                            <button class="btn btn-block btn-outline-primary-2 disabled">Out of Stock</button>
+                            <button class="btn btn-block btn-outline-primary-2 disabled">En rupture</button>
                         </td>
                         <td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
                     </tr>
@@ -110,7 +110,7 @@
             </table><!-- End .table table-wishlist -->
             <div class="wishlist-share">
                 <div class="social-icons social-icons-sm mb-2">
-                    <label class="social-label">Share on:</label>
+                    <label class="social-label">Partager sur:</label>
                     <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
                     <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
                     <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>

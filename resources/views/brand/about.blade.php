@@ -16,7 +16,7 @@
     </nav><!-- End .breadcrumb-nav -->
 
     <div class="container" id="story">
-        <div class="page-header page-header-big text-center" style="background-image: url('assets/images/about-header-bg.jpg')">
+        <div class="page-header page-header-big text-center" style="background-image: url('assets/images/about-header-bg-2.jpg')">
             <h1 class="page-title text-white">Notre marque<span class="text-white">Qui sommes nous ?</span></h1>
         </div><!-- End .page-header -->
     </div><!-- End .container -->
@@ -43,12 +43,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 mb-3 mb-lg-0">
-                        <h2 class="title">Who We Are</h2><!-- End .title -->
+                        <h2 class="title">Qui sommes nous ?</h2><!-- End .title -->
                         <p class="lead text-primary mb-3">Pellentesque odio nisi, euismod pharetra a ultricies <br>in diam. Sed arcu. Cras consequat</p><!-- End .lead text-primary -->
                         <p class="mb-2">Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, uctus metus libero eu augue. </p>
 
                         <a href="blog.html" class="btn btn-sm btn-minwidth btn-outline-primary-2">
-                            <span>VIEW OUR NEWS</span>
+                            <span>Ils parlent de nous</span>
                             <i class="icon-long-arrow-right"></i>
                         </a>
                     </div><!-- End .col-lg-5 -->

@@ -52,7 +52,7 @@
                                     </svg>
                                 </a>
 
-                                <a href="category-2cols.html" class="btn-layout">
+                                <a href="#" class="btn-layout">
                                     <svg width="10" height="10">
                                         <rect x="0" y="0" width="4" height="4" />
                                         <rect x="6" y="0" width="4" height="4" />
@@ -61,7 +61,7 @@
                                     </svg>
                                 </a>
 
-                                <a href="category.html" class="btn-layout">
+                                <a href="#" class="btn-layout">
                                     <svg width="16" height="10">
                                         <rect x="0" y="0" width="4" height="4" />
                                         <rect x="6" y="0" width="4" height="4" />
@@ -72,7 +72,7 @@
                                     </svg>
                                 </a>
 
-                                <a href="category-4cols.html" class="btn-layout">
+                                <a href="#" class="btn-layout">
                                     <svg width="22" height="10">
                                         <rect x="0" y="0" width="4" height="4" />
                                         <rect x="6" y="0" width="4" height="4" />

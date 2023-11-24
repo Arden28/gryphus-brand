@@ -100,7 +100,7 @@
                                 <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
                                 <form action="#" method="get">
                                     <div class="header-search-wrapper search-wrapper-wide">
-                                        <label for="q" class="sr-only">Search</label>
+                                        <label for="q" class="sr-only">Recherchez</label>
                                         <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
                                         <input type="search" class="form-control" name="q" id="q" placeholder="Recherchez un produit ..." required>
                                     </div><!-- End .header-search-wrapper -->
@@ -108,7 +108,7 @@
                             </div><!-- End .header-search -->
                         </div>
                         <div class="header-center">
-                            <a href="index.html" class="logo">
+                            <a href="{{ route('home') }}" class="logo">
                                 <img src="{{ asset('assets/images/demos/demo-9/logo-9.png')}}" alt="Molla Logo" width="185" height="65">
                             </a>
                         </div><!-- End .header-left -->
@@ -133,7 +133,7 @@
                                         <div class="product">
                                             <div class="product-cart-details">
                                                 <h4 class="product-title">
-                                                    <a href="product.html">Beige knitted elastic runner shoes</a>
+                                                    <a href="{{ route('shop') }}">Beige knitted elastic runner shoes</a>
                                                 </h4>
 
                                                 <span class="cart-product-info">
@@ -143,7 +143,7 @@
                                             </div><!-- End .product-cart-details -->
 
                                             <figure class="product-image-container">
-                                                <a href="product.html" class="product-image">
+                                                <a href="{{ route('shop') }}" class="product-image">
                                                     <img src="{{ asset('assets/images/products/cart/product-1.jpg')}}" alt="product">
                                                 </a>
                                             </figure>
@@ -160,7 +160,7 @@
 
                                     <div class="dropdown-cart-action">
                                         <a href="{{ route('cart') }}" class="btn btn-primary">Voir mon panier</a>
-                                        <a href="checkout.html" class="btn btn-outline-primary-2"><span>Procéder au paiement</span><i class="icon-long-arrow-right"></i></a>
+                                        <a href="{{ route('checkout') }}" class="btn btn-outline-primary-2"><span>Procéder au paiement</span><i class="icon-long-arrow-right"></i></a>
                                     </div><!-- End .dropdown-cart-total -->
                                 </div><!-- End .dropdown-menu -->
 
@@ -175,66 +175,6 @@
                             <nav class="main-nav">
                                 <ul class="menu sf-arrows">
 
-                                    <!-- Nouveautés -->
-                                    <li class="active">
-                                        <a href="{{ route('shop') }}" class="sf-with-ul">Nouveauté</a>
-
-                                        <div class="megamenu megamenu-md">
-                                            <div class="row no-gutters">
-                                                <div class="col-md-8">
-                                                    <div class="menu-col">
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="menu-title">Shop with sidebar</div><!-- End .menu-title -->
-                                                                <ul>
-                                                                    <li><a href="category-list.html">Shop List</a></li>
-                                                                    <li><a href="category-2cols.html">Shop Grid 2 Columns</a></li>
-                                                                    <li><a href="{{ route('shop') }}">Shop Grid 3 Columns</a></li>
-                                                                    <li><a href="category-4cols.html">Shop Grid 4 Columns</a></li>
-                                                                    <li><a href="category-market.html"><span>Shop Market<span class="tip tip-new">New</span></span></a></li>
-                                                                </ul>
-
-                                                                <div class="menu-title">Shop no sidebar</div><!-- End .menu-title -->
-                                                                <ul>
-                                                                    <li><a href="category-boxed.html"><span>Shop Boxed No Sidebar<span class="tip tip-hot">Hot</span></span></a></li>
-                                                                    <li><a href="category-fullwidth.html">Shop Fullwidth No Sidebar</a></li>
-                                                                </ul>
-                                                            </div><!-- End .col-md-6 -->
-
-                                                            <div class="col-md-6">
-                                                                <div class="menu-title">Product Category</div><!-- End .menu-title -->
-                                                                <ul>
-                                                                    <li><a href="product-category-boxed.html">Product Category Boxed</a></li>
-                                                                    <li><a href="product-category-fullwidth.html"><span>Product Category Fullwidth<span class="tip tip-new">New</span></span></a></li>
-                                                                </ul>
-                                                                <div class="menu-title">Shop Pages</div><!-- End .menu-title -->
-                                                                <ul>
-                                                                    <li><a href="cart.html">Cart</a></li>
-                                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                                                    <li><a href="dashboard.html">My Account</a></li>
-                                                                    <li><a href="#">Lookbook</a></li>
-                                                                </ul>
-                                                            </div><!-- End .col-md-6 -->
-                                                        </div><!-- End .row -->
-                                                    </div><!-- End .menu-col -->
-                                                </div><!-- End .col-md-8 -->
-
-                                                <div class="col-md-4">
-                                                    <div class="banner banner-overlay">
-                                                        <a href="{{ route('shop') }}" class="banner banner-menu">
-                                                            <img src="{{ asset('assets/images/menu/banner-1.jpg')}}" alt="Banner">
-
-                                                            <div class="banner-content banner-content-top">
-                                                                <div class="banner-title text-white">Last <br>Chance<br><span><strong>Sale</strong></span></div><!-- End .banner-title -->
-                                                            </div><!-- End .banner-content -->
-                                                        </a>
-                                                    </div><!-- End .banner banner-overlay -->
-                                                </div><!-- End .col-md-4 -->
-                                            </div><!-- End .row -->
-                                        </div><!-- End .megamenu megamenu-md -->
-                                    </li>
-
                                     <!-- Men -->
                                     <li class="">
                                         <a href="{{ route('shop') }}" class="sf-with-ul">Homme</a>
@@ -244,38 +184,25 @@
                                                 <div class="col-md-8">
                                                     <div class="menu-col">
                                                         <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="menu-title">Shop with sidebar</div><!-- End .menu-title -->
-                                                                <ul>
-                                                                    <li><a href="category-list.html">Shop List</a></li>
-                                                                    <li><a href="category-2cols.html">Shop Grid 2 Columns</a></li>
-                                                                    <li><a href="{{ route('shop') }}">Shop Grid 3 Columns</a></li>
-                                                                    <li><a href="category-4cols.html">Shop Grid 4 Columns</a></li>
-                                                                    <li><a href="category-market.html"><span>Shop Market<span class="tip tip-new">New</span></span></a></li>
-                                                                </ul>
 
-                                                                <div class="menu-title">Shop no sidebar</div><!-- End .menu-title -->
+                                                            <div class="col-md-6">
+                                                                <div class="menu-title">Vêtements</div><!-- End .menu-title -->
                                                                 <ul>
-                                                                    <li><a href="category-boxed.html"><span>Shop Boxed No Sidebar<span class="tip tip-hot">Hot</span></span></a></li>
-                                                                    <li><a href="category-fullwidth.html">Shop Fullwidth No Sidebar</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Maillots</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Shorts de sport</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Tee-shirt</a></li>
                                                                 </ul>
                                                             </div><!-- End .col-md-6 -->
 
                                                             <div class="col-md-6">
-                                                                <div class="menu-title">Product Category</div><!-- End .menu-title -->
+                                                                <div class="menu-title">Accessoires</div><!-- End .menu-title -->
                                                                 <ul>
-                                                                    <li><a href="product-category-boxed.html">Product Category Boxed</a></li>
-                                                                    <li><a href="product-category-fullwidth.html"><span>Product Category Fullwidth<span class="tip tip-new">New</span></span></a></li>
-                                                                </ul>
-                                                                <div class="menu-title">Shop Pages</div><!-- End .menu-title -->
-                                                                <ul>
-                                                                    <li><a href="cart.html">Cart</a></li>
-                                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                                                    <li><a href="dashboard.html">My Account</a></li>
-                                                                    <li><a href="#">Lookbook</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Bracelets</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Chaussettes</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Casquettes & Bonnets</a></li>
                                                                 </ul>
                                                             </div><!-- End .col-md-6 -->
+
                                                         </div><!-- End .row -->
                                                     </div><!-- End .menu-col -->
                                                 </div><!-- End .col-md-8 -->
@@ -283,10 +210,10 @@
                                                 <div class="col-md-4">
                                                     <div class="banner banner-overlay">
                                                         <a href="{{ route('shop') }}" class="banner banner-menu">
-                                                            <img src="{{ asset('assets/images/menu/banner-1.jpg')}}" alt="Banner">
+                                                            <img src="{{ asset('assets/images/menu/banner-8.jpg')}}" alt="Banner">
 
                                                             <div class="banner-content banner-content-top">
-                                                                <div class="banner-title text-white">Last <br>Chance<br><span><strong>Sale</strong></span></div><!-- End .banner-title -->
+                                                                <div class="banner-title text-white">Trouvez <br>votre<br><span><strong>Choix</strong></span></div><!-- End .banner-title -->
                                                             </div><!-- End .banner-content -->
                                                         </a>
                                                     </div><!-- End .banner banner-overlay -->
@@ -304,38 +231,25 @@
                                                 <div class="col-md-8">
                                                     <div class="menu-col">
                                                         <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="menu-title">Shop with sidebar</div><!-- End .menu-title -->
-                                                                <ul>
-                                                                    <li><a href="category-list.html">Shop List</a></li>
-                                                                    <li><a href="category-2cols.html">Shop Grid 2 Columns</a></li>
-                                                                    <li><a href="{{ route('shop') }}">Shop Grid 3 Columns</a></li>
-                                                                    <li><a href="category-4cols.html">Shop Grid 4 Columns</a></li>
-                                                                    <li><a href="category-market.html"><span>Shop Market<span class="tip tip-new">New</span></span></a></li>
-                                                                </ul>
 
-                                                                <div class="menu-title">Shop no sidebar</div><!-- End .menu-title -->
+                                                            <div class="col-md-6">
+                                                                <div class="menu-title">Vêtements</div><!-- End .menu-title -->
                                                                 <ul>
-                                                                    <li><a href="category-boxed.html"><span>Shop Boxed No Sidebar<span class="tip tip-hot">Hot</span></span></a></li>
-                                                                    <li><a href="category-fullwidth.html">Shop Fullwidth No Sidebar</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Maillots</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Shorts de sport</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Tee-shirt</a></li>
                                                                 </ul>
                                                             </div><!-- End .col-md-6 -->
 
                                                             <div class="col-md-6">
-                                                                <div class="menu-title">Product Category</div><!-- End .menu-title -->
+                                                                <div class="menu-title">Accessoires</div><!-- End .menu-title -->
                                                                 <ul>
-                                                                    <li><a href="product-category-boxed.html">Product Category Boxed</a></li>
-                                                                    <li><a href="product-category-fullwidth.html"><span>Product Category Fullwidth<span class="tip tip-new">New</span></span></a></li>
-                                                                </ul>
-                                                                <div class="menu-title">Shop Pages</div><!-- End .menu-title -->
-                                                                <ul>
-                                                                    <li><a href="cart.html">Cart</a></li>
-                                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                                                    <li><a href="dashboard.html">My Account</a></li>
-                                                                    <li><a href="#">Lookbook</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Bracelets</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Chaussettes</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Casquettes & Bonnets</a></li>
                                                                 </ul>
                                                             </div><!-- End .col-md-6 -->
+
                                                         </div><!-- End .row -->
                                                     </div><!-- End .menu-col -->
                                                 </div><!-- End .col-md-8 -->
@@ -343,10 +257,10 @@
                                                 <div class="col-md-4">
                                                     <div class="banner banner-overlay">
                                                         <a href="{{ route('shop') }}" class="banner banner-menu">
-                                                            <img src="{{ asset('assets/images/menu/banner-1.jpg')}}" alt="Banner">
+                                                            <img src="{{ asset('assets/images/menu/banner-7.jpg')}}" alt="Banner">
 
                                                             <div class="banner-content banner-content-top">
-                                                                <div class="banner-title text-white">Last <br>Chance<br><span><strong>Sale</strong></span></div><!-- End .banner-title -->
+                                                                <div class="banner-title text-white">Trouvez <br>votre<br><span><strong>Choix</strong></span></div><!-- End .banner-title -->
                                                             </div><!-- End .banner-content -->
                                                         </a>
                                                     </div><!-- End .banner banner-overlay -->
@@ -355,47 +269,34 @@
                                         </div><!-- End .megamenu megamenu-md -->
                                     </li>
 
-                                    <!-- Kids & Ados -->
+                                    <!-- Kids -->
                                     <li class="">
-                                        <a href="{{ route('shop') }}" class="sf-with-ul">Enfants & Ados</a>
+                                        <a href="{{ route('shop') }}" class="sf-with-ul">Enfants</a>
 
                                         <div class="megamenu megamenu-md">
                                             <div class="row no-gutters">
                                                 <div class="col-md-8">
                                                     <div class="menu-col">
                                                         <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="menu-title">Shop with sidebar</div><!-- End .menu-title -->
-                                                                <ul>
-                                                                    <li><a href="category-list.html">Shop List</a></li>
-                                                                    <li><a href="category-2cols.html">Shop Grid 2 Columns</a></li>
-                                                                    <li><a href="{{ route('shop') }}">Shop Grid 3 Columns</a></li>
-                                                                    <li><a href="category-4cols.html">Shop Grid 4 Columns</a></li>
-                                                                    <li><a href="category-market.html"><span>Shop Market<span class="tip tip-new">New</span></span></a></li>
-                                                                </ul>
 
-                                                                <div class="menu-title">Shop no sidebar</div><!-- End .menu-title -->
+                                                            <div class="col-md-6">
+                                                                <div class="menu-title">Vêtements</div><!-- End .menu-title -->
                                                                 <ul>
-                                                                    <li><a href="category-boxed.html"><span>Shop Boxed No Sidebar<span class="tip tip-hot">Hot</span></span></a></li>
-                                                                    <li><a href="category-fullwidth.html">Shop Fullwidth No Sidebar</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Maillots</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Shorts de sport</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Tee-shirt</a></li>
                                                                 </ul>
                                                             </div><!-- End .col-md-6 -->
 
                                                             <div class="col-md-6">
-                                                                <div class="menu-title">Product Category</div><!-- End .menu-title -->
+                                                                <div class="menu-title">Accessoires</div><!-- End .menu-title -->
                                                                 <ul>
-                                                                    <li><a href="product-category-boxed.html">Product Category Boxed</a></li>
-                                                                    <li><a href="product-category-fullwidth.html"><span>Product Category Fullwidth<span class="tip tip-new">New</span></span></a></li>
-                                                                </ul>
-                                                                <div class="menu-title">Shop Pages</div><!-- End .menu-title -->
-                                                                <ul>
-                                                                    <li><a href="cart.html">Cart</a></li>
-                                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                                                    <li><a href="dashboard.html">My Account</a></li>
-                                                                    <li><a href="#">Lookbook</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Bracelets</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Chaussettes</a></li>
+                                                                    <li><a href="{{ route('shop') }}">Casquettes & Bonnets</a></li>
                                                                 </ul>
                                                             </div><!-- End .col-md-6 -->
+
                                                         </div><!-- End .row -->
                                                     </div><!-- End .menu-col -->
                                                 </div><!-- End .col-md-8 -->
@@ -403,10 +304,10 @@
                                                 <div class="col-md-4">
                                                     <div class="banner banner-overlay">
                                                         <a href="{{ route('shop') }}" class="banner banner-menu">
-                                                            <img src="{{ asset('assets/images/menu/banner-1.jpg')}}" alt="Banner">
+                                                            <img src="{{ asset('assets/images/menu/banner-4.jpg')}}" alt="Banner">
 
                                                             <div class="banner-content banner-content-top">
-                                                                <div class="banner-title text-white">Last <br>Chance<br><span><strong>Sale</strong></span></div><!-- End .banner-title -->
+                                                                <div class="banner-title text-white">Trouvez <br>votre<br><span><strong>Choix</strong></span></div><!-- End .banner-title -->
                                                             </div><!-- End .banner-content -->
                                                         </a>
                                                     </div><!-- End .banner banner-overlay -->
@@ -560,57 +461,138 @@
                 <span class="mobile-menu-close"><i class="icon-close"></i></span>
 
                 <form action="#" method="get" class="mobile-search">
-                    <label for="mobile-search" class="sr-only">Search</label>
-                    <input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="Search in..." required>
+                    <label for="mobile-search" class="sr-only">Recherchez</label>
+                    <input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="Tapez le nom du produit..." required>
                     <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
                 </form>
 
                 <nav class="mobile-nav">
                     <ul class="mobile-menu">
                         <li class="active">
-                            <a href="index.html">Nouveautés</a>
-
+                            <a href="{{ route('shop') }}">Nouveautés</a>
                             <ul>
-                                <li><a href="index-22.html">22 - tools store</a></li>
-                                <li><a href="index-23.html">23 - fashion left navigation store</a></li>
-                                <li><a href="index-24.html">24 - extreme sport store</a></li>
+                                <li>
+                                    <a href="{{ route('shop') }}" class="sf-with-ul">Homme</a>
+                                    <ul>
+                                        <li><a href="{{ route('shop') }}">Vêtements</a></li>
+                                        <li><a href="{{ route('shop') }}">Chaussures</a></li>
+                                        <li><a href="{{ route('shop') }}">Accessoires</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{{ route('shop') }}" class="sf-with-ul">Femme</a>
+                                    <ul>
+                                        <li><a href="{{ route('shop') }}">Vêtements</a></li>
+                                        <li><a href="{{ route('shop') }}">Chaussures</a></li>
+                                        <li><a href="{{ route('shop') }}">Accessoires</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{{ route('shop') }}" class="sf-with-ul">Enfants</a>
+                                    <ul>
+                                        <li><a href="{{ route('shop') }}">Vêtements</a></li>
+                                        <li><a href="{{ route('shop') }}">Chaussures</a></li>
+                                        <li><a href="{{ route('shop') }}">Accessoires</a></li>
+                                    </ul>
+                                </li>
                             </ul>
+
                         </li>
                         <li>
                             <a href="{{ route('shop') }}">Homme</a>
                             <ul>
-                                <li><a href="category-list.html">Shop List</a></li>
-                                <li><a href="category-2cols.html">Shop Grid 2 Columns</a></li>
-                                <li><a href="{{ route('shop') }}">Shop Grid 3 Columns</a></li>
+                                <li>
+                                    <a class="sf-with-ul" href="{{ route('shop') }}">Vêtements</a><!-- End .menu-title -->
+                                    <ul>
+                                        <li><a href="{{ route('shop') }}">Maillots</a></li>
+                                        <li><a href="{{ route('shop') }}">Shorts</a></li>
+                                        <li><a href="{{ route('shop') }}">Survêtements</a></li>
+                                        <li><a href="{{ route('shop') }}">Tee-shirt</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="sf-with-ul" href="{{ route('shop') }}">Chaussures</a><!-- End .menu-title -->
+                                    <ul>
+                                        <li><a href="{{ route('shop') }}">Baskets</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{{ route('shop') }}" class="sf-with-ul">Accessoires</a>
+                                    <ul>
+                                        <li><a href="{{ route('shop') }}">Accessoires</a></li>
+                                        <li><a href="{{ route('shop') }}">Casquettes & Bonnets</a></li>
+                                        <li><a href="{{ route('shop') }}">Ballons</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="product.html" class="sf-with-ul">Femme</a>
+                            <a href="{{ route('shop') }}" class="sf-with-ul">Femme</a>
                             <ul>
-                                <li><a href="product.html">Default</a></li>
-                                <li><a href="product-centered.html">Centered</a></li>
-                                <li><a href="product-masonry.html">Masonry Sticky Info</a></li>
+                                <li>
+                                    <a class="sf-with-ul" href="{{ route('shop') }}">Vêtements</a><!-- End .menu-title -->
+                                    <ul>
+                                        <li><a href="{{ route('shop') }}">Maillots</a></li>
+                                        <li><a href="{{ route('shop') }}">Shorts</a></li>
+                                        <li><a href="{{ route('shop') }}">Survêtements</a></li>
+                                        <li><a href="{{ route('shop') }}">Tee-shirt</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="sf-with-ul" href="{{ route('shop') }}">Chaussures</a><!-- End .menu-title -->
+                                    <ul>
+                                        <li><a href="{{ route('shop') }}">Baskets</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{{ route('shop') }}" class="sf-with-ul">Accessoires</a>
+                                    <ul>
+                                        <li><a href="{{ route('shop') }}">Accessoires</a></li>
+                                        <li><a href="{{ route('shop') }}">Casquettes & Bonnets</a></li>
+                                        <li><a href="{{ route('shop') }}">Ballons</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="blog.html">Enfants & Ados</a>
+                            <a href="{{ route('shop') }}">Enfants</a>
+                            <ul>
+                                <li>
+                                    <a class="sf-with-ul" href="{{ route('shop') }}">Vêtements</a><!-- End .menu-title -->
+                                    <ul>
+                                        <li><a href="{{ route('shop') }}">Maillots</a></li>
+                                        <li><a href="{{ route('shop') }}">Shorts</a></li>
+                                        <li><a href="{{ route('shop') }}">Survêtements</a></li>
+                                        <li><a href="{{ route('shop') }}">Tee-shirt</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="sf-with-ul" href="{{ route('shop') }}">Chaussures</a><!-- End .menu-title -->
+                                    <ul>
+                                        <li><a href="{{ route('shop') }}">Baskets</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{{ route('shop') }}" class="sf-with-ul">Accessoires</a>
+                                    <ul>
+                                        <li><a href="{{ route('shop') }}">Accessoires</a></li>
+                                        <li><a href="{{ route('shop') }}">Casquettes & Bonnets</a></li>
+                                        <li><a href="{{ route('shop') }}">Ballons</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{{ route('shop') }}">Chaussures</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('about') }}">La Marque</a>
 
                             <ul>
-                                <li><a href="blog.html">Classic</a></li>
-                                <li><a href="{{ route('about') }}">Listing</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="elements-list.html">Chaussures</a>
-                        </li>
-                        <li>
-                            <a href="blog.html">La Marque</a>
-
-                            <ul>
-                                <li><a href="blog.html">Notre histoire</a></li>
-                                <li><a href="blog-listing.html">Nos engagements</a></li>
-                                <li><a href="blog-listing.html">Nos collabs</a></li>
-                                <li><a href="blog-listing.html">Nos points de vente</a></li>
+                                <li><a href="{{ route('about') }}#story">Notre histoire</a></li>
+                                <li><a href="{{ route('about') }}">Nos engagements</a></li>
+                                <li><a href="{{ route('about') }}#partners">Nos collabs</a></li>
+                                <li><a href="{{ route('about') }}">Nos points de vente</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -654,7 +636,7 @@
                             </div>
                         </div>
                         <div class="col-xl-2-5col col-lg-5 ">
-                            <img src="{{ asset('assets/images/popup/newsletter/img-1.jpg')}}" class="newsletter-img" alt="newsletter">
+                            <img src="{{ asset('assets/images/popup/newsletter/img-2.jpg')}}" class="newsletter-img" alt="newsletter">
                         </div>
                     </div>
                 </div>
