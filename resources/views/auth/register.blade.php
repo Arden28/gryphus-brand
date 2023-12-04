@@ -9,6 +9,12 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
+        {{-- <div class="form-group">
+            <label for="register-email">Numéro de téléphone *</label>
+            <input type="tel" class="form-control" id="register-email" name="phone" required>
+            <x-input-error :messages="$errors->get('phone')" class="mt-2" />
+        </div><!-- End .form-group --> --}}
+
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />

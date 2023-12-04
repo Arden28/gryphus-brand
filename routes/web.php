@@ -7,6 +7,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\WishController;
 use Illuminate\Support\Facades\Route;
+use Modules\Dashboard\app\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,12 +28,19 @@ use Illuminate\Support\Facades\Route;
     Route::get('/wishlist', [WishController::class, 'index'])->middleware('auth')->name('wishlist');
 
     Route::get('/shop', [ShopController::class, 'index'])->name('shop');
-    Route::get('/cart', [CartController::class, 'index'])->middleware('auth')->name('cart');
+
+    // Cart
+    Route::get('/cart', [CartController::class, 'index'])->name('cart');
+    Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+
     Route::get('/checkout', [CheckoutController::class, 'index'])->middleware('auth')->name('checkout');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    // PRODUCT
+    Route::get('/product/{slug}', [ProductController::class, 'show'])->name('product.show');
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -45,10 +45,10 @@
                                 }
                             }
                         }'>
-
+                        @foreach ($products as $product)
                         <div class="product product-7 text-center">
                             <figure class="product-media">
-                                <a href="product.html">
+                                <a href="{{ route('product.show', $product->slug) }}">
                                     <img src="{{ asset('assets/images/demos/demo-9/products/product-2-1.jpg')}}" alt="Product image" class="product-image">
                                     <img src="{{ asset('assets/images/demos/demo-9/products/product-2-2.jpg')}}" alt="Product image" class="product-image-hover">
                                 </a>
@@ -57,16 +57,16 @@
                                     <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>ajouter à la wishlist</span></a>
                                     <a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Aperçu rapide"><span>Aperçu rapide</span></a>
                                 </div><!-- End .product-action-vertical -->
-
-                                <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>Ajouter au panier</span></a>
-                                </div><!-- End .product-action -->
+                                    <div class="product-action">
+                                        <input type="hidden" name="product_id" value="{{$product->id}}" />
+                                        <button type="submit" class="btn-product btn-cart" wire:click.prevent="changeName({{ $product->id }})"><span>Ajouter au panier</span></button>
+                                    </div><!-- End .product-action -->
                             </figure><!-- End .product-media -->
 
                             <div class="product-body">
-                                <h3 class="product-title"><a href="product.html">Sandals</a></h3><!-- End .product-title -->
+                                <h3 class="product-title"><a href="{{ route('product.show', $product->slug) }}">{{ $product->title }}</a></h3><!-- End .product-title -->
                                 <div class="product-price">
-                                    $24.99
+                                    {{ $product->price }} €
                                 </div><!-- End .product-price -->
 
                                 <div class="ratings-container">
@@ -77,6 +77,7 @@
                                 </div><!-- End .rating-container -->
                             </div><!-- End .product-body -->
                         </div><!-- End .product -->
+                        @endforeach
 
                     </div><!-- End .owl-carousel -->
                 </div><!-- .End .tab-pane -->

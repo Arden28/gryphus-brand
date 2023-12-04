@@ -19,7 +19,7 @@
                         <div class="header-left">
                             <ul class="top-menu top-link-menu d-none d-md-block">
                                 <li>
-                                    <a href="#">Links</a>
+                                    <a href="#">Liens</a>
                                     <ul>
                                         <li><a href="tel:+33782474450"><i class="icon-phone"></i>Tel: +33 7 82 47 44 50</a></li>
                                     </ul>
@@ -32,13 +32,19 @@
                                 <a href="https://www.facebook.com/GryphusBrand" class="social-icon social-facebook" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
                                 <a href="https://twitter.com/GryphusBrand" class="social-icon social-twitter" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
                                 <a href="https://www.instagram.com/gryphusbrand" class="social-icon social-instagram" title="Pinterest" target="_blank"><i class="icon-instagram"></i></a>
-                                <a href="https://www.youtube.com/channel/UCulMKPO82Hln25y4Mw7eP-A" class="social-icon social-pinterest" title="Instagram" target="_blank"><i class="icon-pinterest-p"></i></a>
+                                <a href="https://www.youtube.com/channel/UCulMKPO82Hln25y4Mw7eP-A" class="social-icon social-youtube" title="Youtube" target="_blank"><i class="icon-youtube"></i></a>
                             </div><!-- End .soial-icons -->
                             @auth
                             <div class="header-dropdown">
                                 <a href="#"><i class="icon-user"></i> {{ Auth::user()->name }}</a></a>
                                 <div class="header-menu">
                                     <ul>
+                                        <li>
+                                            <x-dropdown-link :href="route('dashboard')">
+                                                {{ __('Tableau de bord') }}
+                                            </x-dropdown-link>
+                                        </li>
+
                                         <li>
                                             <x-dropdown-link :href="route('profile.edit')">
                                                 {{ __('Profile') }}
@@ -109,7 +115,7 @@
                         </div>
                         <div class="header-center">
                             <a href="{{ route('home') }}" class="logo">
-                                <img src="{{ asset('assets/images/demos/demo-9/logo-9.png')}}" alt="Molla Logo" width="185" height="65">
+                                <img src="{{ asset('assets/images/logo-icon.png')}}" alt="Gryphus Brand Logo" width="50" height="50">
                             </a>
                         </div><!-- End .header-left -->
 
@@ -120,35 +126,44 @@
                                 <span class="wishlist-txt">Ma Wishlist</span>
                             </a>
 
+                            @php
+                                $cart = Gloudemans\Shoppingcart\Facades\Cart::instance('cart');
+                                $cart_items = $cart->instance()->content();
+                            @endphp
+
                             <div class="dropdown cart-dropdown">
                                 <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                                     <i class="icon-shopping-cart"></i>
-                                    <span class="cart-count">2</span>
-                                    <span class="cart-txt">164,00 €</span>
+
+                                    <span class="cart-count">{{ $cart->count() }}</span>
+                                    <span class="cart-txt">{{ $cart->total() }} €</span>
                                 </a>
 
+                                @if($cart_items->isNotEmpty())
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <div class="dropdown-cart-products">
 
+                                        @foreach($cart_items as $item)
                                         <div class="product">
                                             <div class="product-cart-details">
                                                 <h4 class="product-title">
-                                                    <a href="{{ route('shop') }}">Beige knitted elastic runner shoes</a>
+                                                    <a href="{{ route('product.show', $product->id) }}">{{ $item->title }}</a>
                                                 </h4>
 
                                                 <span class="cart-product-info">
                                                     <span class="cart-product-qty">1</span>
-                                                    x $84.00
+                                                    x {{ $item->price }} €
                                                 </span>
                                             </div><!-- End .product-cart-details -->
 
                                             <figure class="product-image-container">
-                                                <a href="{{ route('shop') }}" class="product-image">
+                                                <a href="{{ route('product.show', $product->id) }}" class="product-image">
                                                     <img src="{{ asset('assets/images/products/cart/product-1.jpg')}}" alt="product">
                                                 </a>
                                             </figure>
                                             <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
                                         </div><!-- End .product -->
+                                        @endforeach
 
                                     </div><!-- End .cart-product -->
 
@@ -163,6 +178,8 @@
                                         <a href="{{ route('checkout') }}" class="btn btn-outline-primary-2"><span>Procéder au paiement</span><i class="icon-long-arrow-right"></i></a>
                                     </div><!-- End .dropdown-cart-total -->
                                 </div><!-- End .dropdown-menu -->
+                                @endif
+
 
                             </div><!-- End .cart-dropdown -->
                         </div>
@@ -318,7 +335,7 @@
 
                                     <!-- Shoes -->
                                     <li>
-                                        <a href="#" class="sf-with-li">
+                                        <a href="{{ route('shop') }}" class="sf-with-li">
                                             Chaussures
                                         </a>
                                     </li>
@@ -330,8 +347,8 @@
                                         <ul>
                                             <li><a href="{{ route('about') }}#story">Notre histoire</a></li>
                                             <li><a href="{{ route('about') }}#story">Nos engagements</a></li>
-                                            <li><a href="{{ route('about') }}#partners">Nos collabs</a></li>
-                                            <li><a href="{{ route('about') }}">Nos points de vente</a></li>
+                                            <li><a href="#">Equipements Club</a></li>
+                                            <li><a href="#">Nos points de vente</a></li>
                                         </ul>
                                     </li>
 
@@ -418,9 +435,9 @@
                                     <h4 class="widget-title">Mon Compte</h4><!-- End .widget-title -->
 
                                     <ul class="widget-list">
-                                        <li><a href="#">Se connecter</a></li>
-                                        <li><a href="cart.html">Mon panier</a></li>
-                                        <li><a href="#">Ma Wishlist</a></li>
+                                        <li><a href="#signin-modal">Se connecter</a></li>
+                                        <li><a href="{{ route('cart') }}">Mon panier</a></li>
+                                        <li><a href="{{ route('wishlist') }}">Ma Wishlist</a></li>
                                         <li><a href="#">Suivre ma commande</a></li>
                                         <li><a href="#">Support</a></li>
                                     </ul><!-- End .widget-list -->

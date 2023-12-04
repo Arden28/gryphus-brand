@@ -14,4 +14,6 @@
 <script src="{{ asset('assets/js/main.js')}}"></script>
 <script src="{{ asset('assets/js/demos/demo-9.js')}}"></script>
 
+@yield('scripts')
+
 @livewireScripts

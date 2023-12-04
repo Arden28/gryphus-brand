@@ -284,7 +284,7 @@
     </div><!-- End .container -->
 
     <!-- Newsletters -->
-    <livewire:home.accessories />
+    <livewire:newsletter />
 
     <!-- Gallerie -->
     <div class="owl-carousel owl-simple" data-toggle="owl"
