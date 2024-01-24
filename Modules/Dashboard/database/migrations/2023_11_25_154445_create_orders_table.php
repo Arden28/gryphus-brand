@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('reference')->unique();
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->float('sub_total');
+            $table->decimal('sub_total', $precision = 12, $scale = 2)->default(0);
             $table->unsignedBigInteger('shipping_id')->nullable();
-            $table->float('coupon')->nullable();
-            $table->float('total_amount');
+            $table->decimal('coupon', $precision = 12, $scale = 2)->default(0);
+            $table->decimal('total_amount', $precision = 12, $scale = 2)->default(0);
             $table->integer('quantity');
             $table->enum('payment_method',['cod','paypal', 'stripe'])->default('cod');
             $table->enum('payment_status',['paid','unpaid'])->default('unpaid');
@@ -30,7 +30,7 @@ return new class extends Migration
             $table->string('post_code')->nullable();
             $table->text('address1')->nullable();
             $table->text('address2')->nullable();
-            
+
             $table->foreign('user_id')->references('id')->on('users')->onDelete('SET NULL');
             // $table->foreign('shipping_id')->references('id')->on('shippings')->onDelete('SET NULL');
             $table->timestamps();

@@ -1,21 +1,11 @@
 <div>
+
     <div class="bg-lighter pt-6">
         <div class="container">
-            <div class="heading heading-flex mb-3">
+            <div class="heading heading-flex">
                 <div class="heading-left">
-                    <h2 class="title">Tendances</h2><!-- End .title -->
+                    <h2 class="title">Nos articles</h2><!-- End .title -->
                 </div><!-- End .heading-left -->
-
-            <div class="heading-right">
-                    <ul class="nav nav-pills nav-border-anim justify-content-center" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="trending-women-link" data-toggle="tab" href="#trending-women-tab" role="tab" aria-controls="trending-women-tab" aria-selected="true">Vêtements pour Femme</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="trending-men-link" data-toggle="tab" href="#trending-men-tab" role="tab" aria-controls="trending-men-tab" aria-selected="false">Vêtements pour Homme</a>
-                        </li>
-                    </ul>
-            </div><!-- End .heading-right -->
             </div><!-- End .heading -->
 
             <div class="tab-content tab-content-carousel">
@@ -49,8 +39,8 @@
                         <div class="product product-7 text-center">
                             <figure class="product-media">
                                 <a href="{{ route('product.show', $product->slug) }}">
-                                    <img src="{{ asset('assets/images/demos/demo-9/products/product-2-1.jpg')}}" alt="Product image" class="product-image">
-                                    <img src="{{ asset('assets/images/demos/demo-9/products/product-2-2.jpg')}}" alt="Product image" class="product-image-hover">
+                                    <img src="{{ asset('assets/images/demos/demo-9/products/product-17.jpg')}}" alt="Product image" class="product-image">
+                                    <img src="{{ asset('assets/images/demos/demo-9/products/product-17.jpg')}}" alt="Product image" class="product-image-hover">
                                 </a>
 
                                 <div class="product-action-vertical">
@@ -71,10 +61,21 @@
 
                                 <div class="ratings-container">
                                     <div class="ratings">
-                                        <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
+                                        <div class="ratings-val" style="width: 0%;"></div><!-- End .ratings-val -->
                                     </div><!-- End .ratings -->
-                                    <span class="ratings-text">( 2 avis )</span>
+                                    <span class="ratings-text">( {{ $product->reviews()->count() }} avis )</span>
                                 </div><!-- End .rating-container -->
+                            <div class="product-nav product-nav-thumbs">
+                                <a href="#" class="active">
+                                    <img src="{{ asset('assets/images/demos/demo-9/products/product-17.jpg')}}" alt="product desc">
+                                </a>
+                                <a href="#" class="active">
+                                    <img src="{{ asset('assets/images/demos/demo-9/products/product-17-thumb.png')}}" alt="product desc">
+                                </a>
+                                <a href="#" class="active">
+                                    <img src="{{ asset('assets/images/demos/demo-9/products/product-18.jpg')}}" alt="product desc">
+                                </a>
+                            </div><!-- End .product-nav -->
                             </div><!-- End .product-body -->
                         </div><!-- End .product -->
                         @endforeach

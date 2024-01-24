@@ -27,12 +27,16 @@
             <div class="row">
                 <div class="col-lg-6 mb-3 mb-lg-0">
                     <h2 class="title">Notre Vision</h2><!-- End .title -->
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. </p>
+                    <p>
+                        Notre vision est celle d'un monde où chaque amateur de sport, à travers nos produits et notre communauté, ressent l'énergie unique et inspirante du basketball à la française. Nous nous engageons à incarner le style sportif avec élégance, à repousser les limites de l'innovation dans nos équipements de basketball, et à créer des vêtements qui reflètent la fusion parfaite entre la performance athlétique et l'esthétique moderne.
+                    </p>
                 </div><!-- End .col-lg-6 -->
 
                 <div class="col-lg-6">
-                    <h2 class="title">Our Mission</h2><!-- End .title -->
-                    <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. <br>Praesent elementum hendrerit tortor. Sed semper lorem at felis. </p>
+                    <h2 class="title">Notre Mission</h2><!-- End .title -->
+                    <p>
+                        Chez Gryphus Brand, notre mission est d'inspirer et d'équiper la communauté mondiale du basketball avec des produits de qualité supérieure, conçus avec dévouement et style. Nous nous engageons à offrir une expérience authentique, unissant les amateurs de sport par notre passion partagée. En repoussant les limites de l'innovation, nous visons à renforcer la connexion entre le sport, le style de vie et la communauté, tout en laissant une empreinte positive dans l'univers du basketball à chaque dribble et chaque pas.
+                    </p>
                 </div><!-- End .col-lg-6 -->
             </div><!-- End .row -->
 
@@ -44,8 +48,10 @@
                 <div class="row">
                     <div class="col-lg-5 mb-3 mb-lg-0">
                         <h2 class="title">Qui sommes nous ?</h2><!-- End .title -->
-                        <p class="lead text-primary mb-3">Pellentesque odio nisi, euismod pharetra a ultricies <br>in diam. Sed arcu. Cras consequat</p><!-- End .lead text-primary -->
-                        <p class="mb-2">Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, uctus metus libero eu augue. </p>
+                        <p class="lead text-primary mb-3">Élégance redéfinie, passion incarnée, l'esprit du basketball à chaque instant <br>in diam. Sed arcu. Cras consequat</p><!-- End .lead text-primary -->
+                        <p class="mb-2">
+                            Gryphus Brand, fièrement française, incarne la passion du basketball et le style sportif dans chacun de ses produits. Nous sommes bien plus qu'une simple marque, nous sommes une communauté dévouée au basketball et au sportwear.
+                        </p>
 
                         <a href="blog.html" class="btn btn-sm btn-minwidth btn-outline-primary-2">
                             <span>Ils parlent de nous</span>
@@ -62,151 +68,6 @@
                 </div><!-- End .row -->
             </div><!-- End .container -->
         </div><!-- End .bg-light-2 pt-6 pb-6 -->
-
-        <div class="container" id="partners">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="brands-text">
-                        <h2 class="title">The world's premium design brands in one destination.</h2><!-- End .title -->
-                        <p>Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nis</p>
-                    </div><!-- End .brands-text -->
-                </div><!-- End .col-lg-5 -->
-                <div class="col-lg-7">
-                    <div class="brands-display">
-                        <div class="row justify-content-center">
-                            <div class="col-6 col-sm-4">
-                                <a href="#" class="brand">
-                                    <img src="assets/images/brands/1.png" alt="Brand Name">
-                                </a>
-                            </div><!-- End .col-sm-4 -->
-
-                            <div class="col-6 col-sm-4">
-                                <a href="#" class="brand">
-                                    <img src="assets/images/brands/2.png" alt="Brand Name">
-                                </a>
-                            </div><!-- End .col-sm-4 -->
-
-                            <div class="col-6 col-sm-4">
-                                <a href="#" class="brand">
-                                    <img src="assets/images/brands/3.png" alt="Brand Name">
-                                </a>
-                            </div><!-- End .col-sm-4 -->
-
-                            <div class="col-6 col-sm-4">
-                                <a href="#" class="brand">
-                                    <img src="assets/images/brands/4.png" alt="Brand Name">
-                                </a>
-                            </div><!-- End .col-sm-4 -->
-
-                            <div class="col-6 col-sm-4">
-                                <a href="#" class="brand">
-                                    <img src="assets/images/brands/5.png" alt="Brand Name">
-                                </a>
-                            </div><!-- End .col-sm-4 -->
-
-                            <div class="col-6 col-sm-4">
-                                <a href="#" class="brand">
-                                    <img src="assets/images/brands/6.png" alt="Brand Name">
-                                </a>
-                            </div><!-- End .col-sm-4 -->
-
-                            <div class="col-6 col-sm-4">
-                                <a href="#" class="brand">
-                                    <img src="assets/images/brands/7.png" alt="Brand Name">
-                                </a>
-                            </div><!-- End .col-sm-4 -->
-
-                            <div class="col-6 col-sm-4">
-                                <a href="#" class="brand">
-                                    <img src="assets/images/brands/8.png" alt="Brand Name">
-                                </a>
-                            </div><!-- End .col-sm-4 -->
-
-                            <div class="col-6 col-sm-4">
-                                <a href="#" class="brand">
-                                    <img src="assets/images/brands/9.png" alt="Brand Name">
-                                </a>
-                            </div><!-- End .col-sm-4 -->
-                        </div><!-- End .row -->
-                    </div><!-- End .brands-display -->
-                </div><!-- End .col-lg-7 -->
-            </div><!-- End .row -->
-
-            <hr class="mt-4 mb-6">
-
-            <h2 class="title text-center mb-4">Meet Our Team</h2><!-- End .title text-center mb-2 -->
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="member member-anim text-center">
-                        <figure class="member-media">
-                            <img src="assets/images/team/member-1.jpg" alt="member photo">
-
-                            <figcaption class="member-overlay">
-                                <div class="member-overlay-content">
-                                    <h3 class="member-title">Samanta Grey<span>Founder & CEO</span></h3><!-- End .member-title -->
-                                    <p>Sed pretium, ligula sollicitudin viverra, tortor libero sodales leo, eget blandit nunc.</p>
-                                    <div class="social-icons social-icons-simple">
-                                        <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
-                                        <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
-                                        <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
-                                    </div><!-- End .soial-icons -->
-                                </div><!-- End .member-overlay-content -->
-                            </figcaption><!-- End .member-overlay -->
-                        </figure><!-- End .member-media -->
-                        <div class="member-content">
-                            <h3 class="member-title">Samanta Grey<span>Founder & CEO</span></h3><!-- End .member-title -->
-                        </div><!-- End .member-content -->
-                    </div><!-- End .member -->
-                </div><!-- End .col-md-4 -->
-
-                <div class="col-md-4">
-                    <div class="member member-anim text-center">
-                        <figure class="member-media">
-                            <img src="assets/images/team/member-2.jpg" alt="member photo">
-
-                            <figcaption class="member-overlay">
-                                <div class="member-overlay-content">
-                                    <h3 class="member-title">Bruce Sutton<span>Sales & Marketing Manager</span></h3><!-- End .member-title -->
-                                    <p>Sed pretium, ligula sollicitudin viverra, tortor libero sodales leo, eget blandit nunc.</p>
-                                    <div class="social-icons social-icons-simple">
-                                        <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
-                                        <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
-                                        <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
-                                    </div><!-- End .soial-icons -->
-                                </div><!-- End .member-overlay-content -->
-                            </figcaption><!-- End .member-overlay -->
-                        </figure><!-- End .member-media -->
-                        <div class="member-content">
-                            <h3 class="member-title">Bruce Sutton<span>Sales & Marketing Manager</span></h3><!-- End .member-title -->
-                        </div><!-- End .member-content -->
-                    </div><!-- End .member -->
-                </div><!-- End .col-md-4 -->
-
-                <div class="col-md-4">
-                    <div class="member member-anim text-center">
-                        <figure class="member-media">
-                            <img src="assets/images/team/member-3.jpg" alt="member photo">
-
-                            <figcaption class="member-overlay">
-                                <div class="member-overlay-content">
-                                    <h3 class="member-title">Janet Joy<span>Product Manager</span></h3><!-- End .member-title -->
-                                    <p>Sed pretium, ligula sollicitudin viverra, tortor libero sodales leo, eget blandit nunc.</p>
-                                    <div class="social-icons social-icons-simple">
-                                        <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
-                                        <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
-                                        <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
-                                    </div><!-- End .soial-icons -->
-                                </div><!-- End .member-overlay-content -->
-                            </figcaption><!-- End .member-overlay -->
-                        </figure><!-- End .member-media -->
-                        <div class="member-content">
-                            <h3 class="member-title">Janet Joy<span>Product Manager</span></h3><!-- End .member-title -->
-                        </div><!-- End .member-content -->
-                    </div><!-- End .member -->
-                </div><!-- End .col-md-4 -->
-            </div><!-- End .row -->
-        </div><!-- End .container -->
 
         <div class="mb-2"></div><!-- End .mb-2 -->
 
@@ -228,20 +89,21 @@
                     }'>
                     <blockquote class="testimonial text-center">
                         <img src="assets/images/testimonials/user-1.jpg" alt="user">
-                        <p>“ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. <br>In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. ”</p>
+                        <p>“ Les produits Gryphus Brand ne sont pas seulement des vêtements de sport, mais une véritable déclaration de style et de passion. En tant que fan de basketball, je me sens connectée à une communauté mondiale partageant la même énergie. Les designs sont élégants, les matériaux de haute qualité, et chaque achat me rappelle pourquoi j'adore le basketball à la française. ”</p>
                         <cite>
-                            Jenson Gregory
-                            <span>Customer</span>
+                            Alexandre, Paris
+                            <span>Client</span>
                         </cite>
                     </blockquote><!-- End .testimonial -->
 
                     <blockquote class="testimonial text-center">
                         <img src="assets/images/testimonials/user-2.jpg" alt="user">
-                        <p>“ Impedit, ratione sequi, sunt incidunt magnam et. Delectus obcaecati optio eius error libero perferendis nesciunt atque dolores magni recusandae! Doloremque quidem error eum quis similique doloribus natus qui ut ipsum.Velit quos ipsa exercitationem, vel unde obcaecati impedit eveniet non. ”</p>
+                        <p>“ Gryphus Brand a transformé ma façon de vivre le basketball. Leurs équipements allient parfaitement performance et esthétique, me donnant une confiance inégalée sur le terrain. Être membre de cette communauté, c'est bien plus qu'un simple achat, c'est une expérience. Gryphus Brand, pour moi, incarne le véritable esprit du sport et du style de vie.”</p>
 
                         <cite>
-                            Victoria Ventura
-                            <span>Customer</span>
+                            Sophie, Lyon
+
+                            <span>Client</span>
                         </cite>
                     </blockquote><!-- End .testimonial -->
                 </div><!-- End .testimonials-slider owl-carousel -->

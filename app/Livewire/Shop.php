@@ -15,6 +15,8 @@ class Shop extends Component
     public $filters = [];
     public $search = '';
 
+    public $category;
+
     public function render()
     {
         $products = Product::query();

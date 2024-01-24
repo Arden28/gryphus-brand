@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "darryldecode/cart": "^4.2",
         "guzzlehttp/guzzle": "^7.2",
         "hardevine/shoppingcart": "^3.2",
         "laravel/framework": "^10.10",
@@ -13,6 +14,8 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.1",
         "nwidart/laravel-modules": "^10.0",
+        "paypal/rest-api-sdk-php": "*",
+        "srmklive/paypal": "^3.0",
         "tonysm/rich-text-laravel": "^1.7"
     },
     "require-dev": {
@@ -36,7 +39,10 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
-        }
+        },
+        "files": [
+            "Modules/Dashboard/app/Helpers/helpers.php"
+        ]
     },
     "scripts": {
         "post-autoload-dump": [

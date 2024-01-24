@@ -210,78 +210,16 @@
                 </div><!-- End .row -->
             </div><!-- End .banner-group -->
 
-            <div class="owl-carousel mt-4 mb-3 owl-simple" data-toggle="owl"
-                data-owl-options='{
-                    "nav": false,
-                    "dots": false,
-                    "margin": 30,
-                    "loop": false,
-                    "responsive": {
-                        "0": {
-                            "items":2
-                        },
-                        "420": {
-                            "items":3
-                        },
-                        "600": {
-                            "items":4
-                        },
-                        "900": {
-                            "items":5
-                        },
-                        "1024": {
-                            "items":6
-                        }
-                    }
-                }'>
-                <a href="#" class="brand">
-                    <img src="{{ asset('assets/images/brands/1.png')}}" alt="Brand Name">
-                </a>
-
-                <a href="#" class="brand">
-                    <img src="{{ asset('assets/images/brands/2.png')}}" alt="Brand Name">
-                </a>
-
-                <a href="#" class="brand">
-                    <img src="{{ asset('assets/images/brands/3.png')}}" alt="Brand Name">
-                </a>
-
-                <a href="#" class="brand">
-                    <img src="{{ asset('assets/images/brands/4.png')}}" alt="Brand Name">
-                </a>
-
-                <a href="#" class="brand">
-                    <img src="{{ asset('assets/images/brands/5.png')}}" alt="Brand Name">
-                </a>
-
-                <a href="#" class="brand">
-                    <img src="{{ asset('assets/images/brands/6.png')}}" alt="Brand Name">
-                </a>
-
-                <a href="#" class="brand">
-                    <img src="{{ asset('assets/images/brands/7.png')}}" alt="Brand Name">
-                </a>
-            </div><!-- End .owl-carousel -->
         </div><!-- End .container -->
     </div><!-- End .bg-lighter -->
 
     <!-- Home Trends -->
-    <livewire:home.trends />
-
-    <!-- Home Shoes Trends -->
-    <livewire:home.shoes />
-
+    <livewire:home.product-list />
 
     <div class="container">
         <hr class="mt-3 mb-4">
     </div><!-- End .container -->
 
-    <!-- Accessoires & équipements -->
-    <livewire:home.accessories />
-
-    <div class="container">
-        <hr class="mt-3 mt-xl-1 mb-0">
-    </div><!-- End .container -->
 
     <!-- Newsletters -->
     <livewire:newsletter />

@@ -29,6 +29,15 @@ class Order extends Model
         return $this->belongsTo(Coupon::class, 'coupon_id', 'id');
     }
 
+    public static function boot() {
+        parent::boot();
+
+        static::creating(function ($model) {
+            $number = Order::max('id') + 1;
+            $model->reference = make_reference_id('SL', $number);
+        });
+    }
+
     // protected static function newFactory(): OrderFactory
     // {
     //     //return OrderFactory::new();
