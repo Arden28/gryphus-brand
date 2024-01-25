@@ -1,6 +1,6 @@
 <div>
 
-    <div class="bg-lighter pt-6">
+    <div class="pt-6">
         <div class="container">
             <div class="heading heading-flex">
                 <div class="heading-left">

@@ -9,63 +9,6 @@
                                 Produits  <span>{{ $products->firstItem() }}-{{ $products->lastItem() }}</span> sur {{ $products->total() }}
                             </div><!-- End .toolbox-info -->
                         </div><!-- End .toolbox-left -->
-
-                        <div class="toolbox-right">
-                            <div class="toolbox-sort">
-                                <label for="sortby">Trier par:</label>
-                                <div class="select-custom">
-                                    <select wire:model="sortField" class="form-control">
-                                        <option value="default">Tri par défaut</option>
-                                        <option value="price_low">Prix(- cher)</option>
-                                        <option value="price_high">Prix(+ cher)</option>
-                                        <option value="date">Notre sélection</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="toolbox-layout">
-                                <a href="category-list.html" class="btn-layout active">
-                                    <svg width="16" height="10">
-                                        <rect x="0" y="0" width="4" height="4" />
-                                        <rect x="6" y="0" width="10" height="4" />
-                                        <rect x="0" y="6" width="4" height="4" />
-                                        <rect x="6" y="6" width="10" height="4" />
-                                    </svg>
-                                </a>
-
-                                <a href="#" class="btn-layout">
-                                    <svg width="10" height="10">
-                                        <rect x="0" y="0" width="4" height="4" />
-                                        <rect x="6" y="0" width="4" height="4" />
-                                        <rect x="0" y="6" width="4" height="4" />
-                                        <rect x="6" y="6" width="4" height="4" />
-                                    </svg>
-                                </a>
-
-                                <a href="#" class="btn-layout">
-                                    <svg width="16" height="10">
-                                        <rect x="0" y="0" width="4" height="4" />
-                                        <rect x="6" y="0" width="4" height="4" />
-                                        <rect x="12" y="0" width="4" height="4" />
-                                        <rect x="0" y="6" width="4" height="4" />
-                                        <rect x="6" y="6" width="4" height="4" />
-                                        <rect x="12" y="6" width="4" height="4" />
-                                    </svg>
-                                </a>
-
-                                <a href="#" class="btn-layout">
-                                    <svg width="22" height="10">
-                                        <rect x="0" y="0" width="4" height="4" />
-                                        <rect x="6" y="0" width="4" height="4" />
-                                        <rect x="12" y="0" width="4" height="4" />
-                                        <rect x="18" y="0" width="4" height="4" />
-                                        <rect x="0" y="6" width="4" height="4" />
-                                        <rect x="6" y="6" width="4" height="4" />
-                                        <rect x="12" y="6" width="4" height="4" />
-                                        <rect x="18" y="6" width="4" height="4" />
-                                    </svg>
-                                </a>
-                            </div><!-- End .toolbox-layout -->
-                        </div><!-- End .toolbox-right -->
                     </div><!-- End .toolbox -->
 
                     <div class="products mb-3">
@@ -103,7 +46,6 @@
 
                                         <div class="product-action">
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>aperçu rapide</span></a>
-                                            <a href="#" class="btn-product btn-compare" title="Compare"><span>comparer</span></a>
                                         </div><!-- End .product-action -->
 
                                         <a href="#" class="btn-product btn-cart"><span>ajouter au panier</span></a>
@@ -145,7 +87,8 @@
                     </div><!-- End .products -->
 
                     <nav aria-label="Page navigation">
-                        <ul class="pagination">
+                        {{ $products->links() }}
+                        {{-- <ul class="pagination">
                             <li class="page-item disabled">
                                 <a class="page-link page-link-prev" href="#" aria-label="Previous" tabindex="-1" aria-disabled="true">
                                     <span aria-hidden="true"><i class="icon-long-arrow-left"></i></span>Précédent
@@ -160,7 +103,7 @@
                                     Suivant <span aria-hidden="true"><i class="icon-long-arrow-right"></i></span>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </nav>
                 </div><!-- End .col-lg-9 -->
 
@@ -193,27 +136,6 @@
                                         @endforeach
 
                                     </div><!-- End .filter-items -->
-                                </div><!-- End .widget-body -->
-                            </div><!-- End .collapse -->
-                        </div><!-- End .widget -->
-
-                        <div class="widget widget-collapsible">
-                            <h3 class="widget-title">
-                                <a data-toggle="collapse" href="#widget-5" role="button" aria-expanded="true" aria-controls="widget-5">
-                                    Prix
-                                </a>
-                            </h3><!-- End .widget-title -->
-
-                            <div class="collapse show" id="widget-5">
-                                <div class="widget-body">
-                                    <div class="filter-price">
-                                        <div class="filter-price-text">
-                                            Échelle des prix:
-                                            <span id="filter-price-range"></span>
-                                        </div><!-- End .filter-price-text -->
-
-                                        <div id="price-slider"></div><!-- End #price-slider -->
-                                    </div><!-- End .filter-price -->
                                 </div><!-- End .widget-body -->
                             </div><!-- End .collapse -->
                         </div><!-- End .widget -->

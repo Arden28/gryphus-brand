@@ -22,6 +22,11 @@ class ProductController extends Controller
         return view('dashboard::shop.products.index', compact('products'));
     }
 
+    public function gryOne()
+    {
+        return view('gry-one');
+    }
+
     /**
      * Display a listing of the resource.
      */

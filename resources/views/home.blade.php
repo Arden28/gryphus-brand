@@ -144,16 +144,6 @@
                             </div><!-- End .icon-box-content -->
                         </div><!-- End .icon-box -->
 
-                        <div class="icon-box icon-box-side">
-                            <span class="icon-box-icon">
-                                <i class="icon-life-ring"></i>
-                            </span>
-
-                            <div class="icon-box-content">
-                                <h3 class="icon-box-title">Nous prenons en charge</h3><!-- End .icon-box-title -->
-                                <p>Services incroyables 24h/7j</p>
-                            </div><!-- End .icon-box-content -->
-                        </div><!-- End .icon-box -->
                 </div><!-- End .owl-carousel -->
             </div><!-- End .container -->
         </div><!-- End .icon-boxes-container -->
@@ -220,9 +210,91 @@
         <hr class="mt-3 mb-4">
     </div><!-- End .container -->
 
+    <div class="video-banner  pt-5 pb-5">
+        <div class="container align-items-center">
+            <div class="video-banner-box">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <div class="video-box-content">
+                            <h4 class="video-banner-title h1"><strong>Gryphus Brand for Team</strong></h4><!-- End .video-banner-title -->
+                            <p>
+                                Gryphus Brand s'investit désormais pleinement dans la réalisation de vos projets d'équipement. Opter pour les tenues Gryphus Brand pour votre équipe, c'est garantir l'association harmonieuse de la qualité et d'un design élégant, tout en préservant une accessibilité tarifaire.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary"><span>En savoir +</span><i class="icon-long-arrow-right"></i></a>
+                        </div><!-- End .video-box-content -->
+                    </div><!-- End .col-md-6 -->
+                    <div class="col-md-6">
+                        <div class="video-poster">
+                            <img src="{{ asset('assets/images/video/poster-3.jpg') }}" alt="poster">
+
+                            <div class="video-poster-content">
+                                <a href="https://www.youtube.com/watch?v=vBPgmASQ1A0" class="btn-video btn-iframe"><i class="icon-play"></i></a>
+                            </div><!-- End .video-poster-content -->
+                        </div><!-- End .video-poster -->
+                    </div><!-- End .col-md-6 -->
+                </div><!-- End .row -->
+            </div><!-- End .video-banner-box -->
+        </div><!-- End .container -->
+    </div><!-- End .video-banner bg-image -->
 
     <!-- Newsletters -->
     <livewire:newsletter />
+
+    <div class="container">
+
+        <h2 class="title mb-3">FAQ</h2><!-- End .title -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="accordion accordion-rounded accordion-plus" id="accordion-6">
+                    <div class="card card-box card-sm bg-white">
+                        <div class="card-header" id="heading6-1">
+                            <h2 class="card-title">
+                                <a role="button" data-toggle="collapse" href="#collapse6-1" aria-expanded="true" aria-controls="collapse6-1">
+                                    Cras ornare tristique elit.
+                                </a>
+                            </h2>
+                        </div><!-- End .card-header -->
+                        <div id="collapse6-1" class="collapse show" aria-labelledby="heading6-1" data-parent="#accordion-6">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.
+                            </div><!-- End .card-body -->
+                        </div><!-- End .collapse -->
+                    </div><!-- End .card -->
+
+                    <div class="card card-box card-sm bg-white">
+                        <div class="card-header" id="heading6-2">
+                            <h2 class="card-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" href="#collapse6-2" aria-expanded="false" aria-controls="collapse6-2">
+                                    Vivamus vestibulum ntulla
+                                </a>
+                            </h2>
+                        </div><!-- End .card-header -->
+                        <div id="collapse6-2" class="collapse" aria-labelledby="heading6-2" data-parent="#accordion-6">
+                            <div class="card-body">
+                                Ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+                            </div><!-- End .card-body -->
+                        </div><!-- End .collapse -->
+                    </div><!-- End .card -->
+
+                    <div class="card card-box card-sm bg-white">
+                        <div class="card-header" id="heading6-3">
+                            <h2 class="card-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" href="#collapse6-3" aria-expanded="false" aria-controls="collapse6-3">
+                                    Praesent placerat risus
+                                </a>
+                            </h2>
+                        </div><!-- End .card-header -->
+                        <div id="collapse6-3" class="collapse" aria-labelledby="heading6-3" data-parent="#accordion-6">
+                            <div class="card-body">
+                                Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+                            </div><!-- End .card-body -->
+                        </div><!-- End .collapse -->
+                    </div><!-- End .card -->
+                </div><!-- End .accordion -->
+            </div><!-- End .col-md-6 -->
+        </div><!-- End .row -->
+    </div>
 
     <!-- Gallerie -->
     <div class="owl-carousel owl-simple" data-toggle="owl"

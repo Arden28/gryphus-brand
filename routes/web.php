@@ -27,6 +27,10 @@ use Modules\Dashboard\app\Http\Controllers\ProductController;
 // });
     Route::get('/', [FrontendController::class, 'index'])->name('home');
     Route::get('/about', [FrontendController::class, 'about'])->name('about');
+    Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
+    Route::get('/legal-mentions', [FrontendController::class, 'legal'])->name('brand.legal');
+    // Contact
+    Route::post('/contact', [FrontendController::class, 'processForm'])->name('contact.post');
     Route::get('/wishlist', [WishController::class, 'index'])->middleware('auth')->name('wishlist');
 
     Route::get('/shop', [ShopController::class, 'index'])->name('shop');
@@ -42,6 +46,7 @@ use Modules\Dashboard\app\Http\Controllers\ProductController;
     Route::get('/checkout', [CheckoutController::class, 'index'])->middleware(['auth', 'cart'])->name('checkout');
 
     // PRODUCT
+    Route::get('/gry-one', [ProductController::class, 'gryOne'])->name('product.gry');
     Route::get('/product/{slug}', [ProductController::class, 'show'])->name('product.show');
 
 // Route::get('/dashboard', function () {

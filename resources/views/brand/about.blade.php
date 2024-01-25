@@ -43,7 +43,7 @@
             <div class="mb-5"></div><!-- End .mb-4 -->
         </div><!-- End .container -->
 
-        <div class="bg-light-2 pt-6 pb-5 mb-6 mb-lg-8">
+        <div class=" pt-6 pb-5 mb-6 mb-lg-8">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 mb-3 mb-lg-0">
@@ -53,16 +53,12 @@
                             Gryphus Brand, fièrement française, incarne la passion du basketball et le style sportif dans chacun de ses produits. Nous sommes bien plus qu'une simple marque, nous sommes une communauté dévouée au basketball et au sportwear.
                         </p>
 
-                        <a href="blog.html" class="btn btn-sm btn-minwidth btn-outline-primary-2">
-                            <span>Ils parlent de nous</span>
-                            <i class="icon-long-arrow-right"></i>
-                        </a>
                     </div><!-- End .col-lg-5 -->
 
                     <div class="col-lg-6 offset-lg-1">
                         <div class="about-images">
-                            <img src="assets/images/about/img-1.jpg" alt="" class="about-img-front">
-                            <img src="assets/images/about/img-2.jpg" alt="" class="about-img-back">
+                            <img src="{{ asset('assets/images/about/banner-9.jpg') }}" style="height: 700px;" alt="Gryphus Brand" class="about-img-front">
+                            <img src="{{ asset('assets/images/about/banner-10.jpg') }}" style="height: 700px;" alt="Gryphus Brand" class="about-img-back">
                         </div><!-- End .about-images -->
                     </div><!-- End .col-lg-6 -->
                 </div><!-- End .row -->
@@ -71,7 +67,56 @@
 
         <div class="mb-2"></div><!-- End .mb-2 -->
 
-        <div class="about-testimonials bg-light-2 pt-6 pb-6">
+        <div class="pt-6 pb-7 mb-6">
+            <div class="container">
+                <h2 class="title text-center mb-4">L'équipe Gryphus</h2><!-- End .title text-center mb-2 -->
+
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="member member-2 text-center">
+                            <figure class="member-media">
+                                <img src="assets/images/team/about-2/member-2.jpg" alt="member photo">
+
+                                <figcaption class="member-overlay">
+                                    <div class="social-icons social-icons-simple">
+                                        <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
+                                        <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
+                                        <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
+                                    </div><!-- End .soial-icons -->
+                                </figcaption><!-- End .member-overlay -->
+                            </figure><!-- End .member-media -->
+                            <div class="member-content">
+                                <h3 class="member-title">Evrard Makanda Mvilla<span>Fondateur & Promoteur</span></h3><!-- End .member-title -->
+                            </div><!-- End .member-content -->
+                        </div><!-- End .member -->
+                    </div><!-- End .col-lg-3 -->
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="member member-2 text-center">
+                            <figure class="member-media">
+                                <img src="assets/images/team/about-2/member-1.jpg" alt="member photo">
+
+                                <figcaption class="member-overlay">
+                                    <div class="social-icons social-icons-simple">
+                                        <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
+                                        <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
+                                        <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
+                                    </div><!-- End .soial-icons -->
+                                </figcaption><!-- End .member-overlay -->
+                            </figure><!-- End .member-media -->
+                            <div class="member-content">
+                                <h3 class="member-title">Samanta Grey<span>Founder & CEO</span></h3><!-- End .member-title -->
+                            </div><!-- End .member-content -->
+                        </div><!-- End .member -->
+                    </div><!-- End .col-lg-3 -->
+
+                </div><!-- End .row -->
+
+            </div><!-- End .container -->
+        </div><!-- End "pt-6 pb-6 -->
+
+        <div class="mb-2"></div><!-- End .mb-2 -->
+
+        <div class="about-testimonials pt-6 pb-6">
             <div class="container">
                 <h2 class="title text-center mb-3">Ce que nos clients disent de nous</h2><!-- End .title text-center -->
 
@@ -109,6 +154,38 @@
                 </div><!-- End .testimonials-slider owl-carousel -->
             </div><!-- End .container -->
         </div><!-- End .bg-light-2 pt-5 pb-6 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="brands-text text-center mx-auto mb-6">
+                        <h2 class="title">Ils parlent de nous !</h2><!-- End .title -->
+                        {{-- <p>Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nis</p> --}}
+                    </div><!-- End .brands-text -->
+                    <div class="brands-display">
+                        <div class="row justify-content-center">
+
+                            <div class="col-6 col-sm-4 col-md-3">
+                                <a href="#" class="brand">
+                                    <img src="assets/images/brands/5.png" alt="Brand Name">
+                                </a>
+                            </div><!-- End .col-md-3 -->
+
+                            <div class="col-6 col-sm-4 col-md-3">
+                                <a href="#" class="brand">
+                                    <img src="assets/images/brands/6.png" alt="Brand Name">
+                                </a>
+                            </div><!-- End .col-md-3 -->
+
+                            <div class="col-6 col-sm-4 col-md-3">
+                                <a href="#" class="brand">
+                                    <img src="assets/images/brands/9.png" alt="Brand Name">
+                                </a>
+                            </div><!-- End .col-md-3 -->
+                        </div><!-- End .row -->
+                    </div><!-- End .brands-display -->
+                </div><!-- End .col-lg-10 offset-lg-1 -->
+            </div><!-- End .row -->
+        </div><!-- End .container -->
     </div><!-- End .page-content -->
 </main><!-- End .main -->
 @endsection
