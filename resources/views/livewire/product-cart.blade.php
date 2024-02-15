@@ -1,5 +1,6 @@
 <div>
     <div class="container">
+        @if($cart_items->isNotEmpty())
         <div class="row">
             <div class="col-lg-9">
                 <table class="table table-cart table-mobile">
@@ -21,7 +22,7 @@
                                     <div class="product">
                                         <figure class="product-media">
                                             <a href="#">
-                                                <img src="assets/images/products/table/product-1.jpg" alt="Product image">
+                                                <img src="{{ Modules\Dashboard\app\Models\Product::find($cart_item->id)->photo }}" alt="{{ $cart_item->name }}">
                                             </a>
                                         </figure>
 
@@ -32,10 +33,10 @@
                                 </td>
                                 <td class="price-col">{{$cart_item->price}} €</td>
                                 <td class="quantity-col">
-                                    {{-- @include('livewire.includes.product-cart-update-quantity') --}}
-                                    <div class="cart-product-quantity">
+                                    @include('livewire.includes.product-cart-update-quantity')
+                                    {{-- <div class="cart-product-quantity">
                                         <input type="number" wire:model.defer="quantity.{{ $cart_item->id }}" class="form-control" value="{{ $cart_item->qty }}" min="1" max="10" step="1" data-decimals="0" required>
-                                    </div>
+                                    </div> --}}
                                 </td>
                                 <td class="total-col">{{$cart_item->subtotal}} €</td>
                                 <td class="remove-col">
@@ -88,11 +89,21 @@
                             <tr class="summary-shipping-row">
                                 <td>
                                     <div class="custom-control custom-radio">
-                                        <input checked type="radio" id="free-shipping" name="shipping" class="custom-control-input">
+                                        <input checked type="radio" id="free-shipping" name="shipping" class="custom-control-input" value="free-shipping">
                                         <label class="custom-control-label" for="free-shipping">Livraison gratuite</label>
                                     </div><!-- End .custom-control -->
                                 </td>
-                                <td>$0.00</td>
+                                <td>0.00 €</td>
+                            </tr><!-- End .summary-shipping-row -->
+
+                            <tr class="summary-shipping-row">
+                                <td>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="free-shipping" name="shipping" class="custom-control-input" value="metropolitan">
+                                        <label class="custom-control-label" for="free-shipping">Livraison gratuite</label>
+                                    </div><!-- End .custom-control -->
+                                </td>
+                                <td>8.00 €</td>
                             </tr><!-- End .summary-shipping-row -->
 
                             <tr class="summary-subtotal">
@@ -116,6 +127,10 @@
 
                 <a href="{{ route('shop') }}" class="btn btn-outline-dark-2 btn-block mb-3"><span>CONTINUER</span><i class="icon-refresh"></i></a>
             </aside><!-- End .col-lg-3 -->
+
         </div><!-- End .row -->
+        @else
+        <p>Votre panier est vide, veuiller y ajouter un produit. <a href="{{ route('shop') }}">La Boutique</a></p>
+        @endif
     </div><!-- End .container -->
 </div>

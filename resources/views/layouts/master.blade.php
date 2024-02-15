@@ -121,7 +121,7 @@
 
                                             <figure class="product-image-container">
                                                 <a href="#" class="product-image">
-                                                    <img src="{{ asset('assets/images/products/cart/product-1.jpg')}}" alt="product">
+                                                    <img src="{{ \Modules\Dashboard\app\Models\Product::find($item->id)->photo }}" alt="product">
                                                 </a>
                                             </figure>
                                             <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
@@ -137,8 +137,8 @@
                                     </div><!-- End .dropdown-cart-total -->
 
                                     <div class="dropdown-cart-action">
-                                        <a href="{{ route('cart') }}" class="btn btn-primary">Voir mon panier</a>
-                                        <a href="{{ route('checkout') }}" class="btn btn-outline-primary-2"><span>Procéder au paiement</span><i class="icon-long-arrow-right"></i></a>
+                                        <a href="{{ route('cart') }}" class="btn btn-primary">Panier</a>
+                                        <a href="{{ route('checkout') }}" class="btn btn-outline-primary-2"><span>Commander</span><i class="icon-long-arrow-right"></i></a>
                                     </div><!-- End .dropdown-cart-total -->
                                 </div><!-- End .dropdown-menu -->
                                 @endif

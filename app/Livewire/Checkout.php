@@ -4,6 +4,8 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Modules\Dashboard\app\Models\Order;
 
 use PayPal\Api\Payer;
@@ -15,15 +17,26 @@ use PayPal\Api\RedirectUrls;
 use PayPal\Api\PaymentExecution;
 use PayPal\Auth\OAuthTokenCredential;
 use PayPal\Exception\PayPalConnectionException;
+use Stripe\Charge;
+use Stripe\PaymentIntent;
+use Stripe\Stripe;
+use Stripe\Token;
 
 class Checkout extends Component
 {
 
+    public $intent, $order;
     public $name, $address, $city, $country, $zip, $phone, $email, $note;
 
     public bool $create_account, $ship_other;
 
-    public $selectedGateway;
+    public $selectedGateway = 'stripe';
+
+    // Stripe
+    public $cardNum;
+    public $cardCvc;
+    public $cardExpiryMonth;
+    public $cardExpiryYear;
 
     public function mount(){
         if(auth()){
@@ -41,6 +54,10 @@ class Checkout extends Component
         'phone' => 'required|string',
         'email' => 'required|string',
         'note' => 'nullable|string',
+        // 'cardNum' => 'required|integer|min:15|max:17',
+        // 'cardCvc' => 'required|integer|digits:3',
+        // 'cardExpiryMonth' => 'required|integer',
+        // 'cardExpiryYear' => 'required|integer',
     ];
 
     public function render()
@@ -83,18 +100,58 @@ class Checkout extends Component
             $this->processCODPayment();
         }
         $order->save();
+        $this->order = $order->id;
 
         Cart::instance('cart')->destroy();
 
-        // return redirect(route('home'));
+        return redirect(route('home'));
 
         // You can redirect or perform other actions after payment processing
     }
 
-    private function processStripePayment()
+    public function processStripePayment()
     {
-        // Implement Stripe payment processing logic
-        // Redirect to Stripe or handle the API call
+
+        // Example: Stripe token creation
+        $token = $this->createStripeToken();
+
+        // Stripe::setApiKey(env('STRIPE_KEY'));
+        Stripe::setApiKey(env('STRIPE_SECRET'));
+        $payment_intent = PaymentIntent::create ([
+                'amount' => convertToInt(Cart::instance('cart')->total()),
+                'currency' => 'EUR',
+                'description' => 'Payment From Koverae',
+                // 'payment_method_types' => ['card'],
+                "source" => $token,
+        ]);
+		$this->intent = $payment_intent->client_secret;
+
+        Session::flash('success', 'Payment has been successfully processed.');
+    }
+
+    // Create Stripe Token
+    private function createStripeToken()
+    {
+        // Example: Stripe token creation logic
+        Stripe::setApiKey(env('STRIPE_KEY'));
+
+        return Token::create([
+            'card' => [
+                'number' => $this->cardNum,
+                'cvc' => $this->cardCvc,
+                'exp_month' => $this->cardExpiryMonth,
+                'exp_year' => $this->cardExpiryYear,
+            ],
+        ]);
+    }
+
+    private function resetForm()
+    {
+        // Reset form fields or any other necessary data
+        $this->cardNum = '';
+        $this->cardCvc = '';
+        $this->cardExpiryMonth = '';
+        $this->cardExpiryYear = '';
     }
 
     private function processPayPalPayment($order)

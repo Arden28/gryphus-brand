@@ -28,6 +28,6 @@
 //  Replace SB_CLIENT_ID with your sandbox client ID.
 </script>
 
-@yield('scripts')
-
 @livewireScripts
+
+@yield('scripts')

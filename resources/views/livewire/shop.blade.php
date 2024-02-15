@@ -27,7 +27,7 @@
                                         <span class="product-label label-warning">Nouveau</span>
                                         @endif
                                         <a href="{{ route('product.show', $product->slug) }}">
-                                            <img src="assets/images/products/product-4.jpg" alt="Product image" class="product-image">
+                                            <img src="{{ $product->photo }}" alt="{{ $product->title }}" class="product-image">
                                         </a>
                                     </figure><!-- End .product-media -->
                                 </div><!-- End .col-sm-6 col-lg-3 -->
@@ -38,17 +38,26 @@
                                             {{ $product->price }} €
                                         </div><!-- End .product-price -->
                                         <div class="ratings-container">
+                                            @if($product->review >= 1)
                                             <div class="ratings">
-                                                <div class="ratings-val" style="width: 20%;"></div><!-- End .ratings-val -->
+                                                <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
                                             </div><!-- End .ratings -->
+                                            @endif
                                             <span class="ratings-text">( {{ count($product->reviews) }} Avis )</span>
                                         </div><!-- End .rating-container -->
 
+                                        <!--
                                         <div class="product-action">
                                             <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>aperçu rapide</span></a>
-                                        </div><!-- End .product-action -->
+                                        </div> End .product-action -->
 
-                                        <a href="#" class="btn-product btn-cart"><span>ajouter au panier</span></a>
+                                        <form action="{{ route('cart.add') }}" method="post">
+                                            @csrf
+                                            <div class="product-action">
+                                                <input type="hidden" name="product_id" value="{{ $product->id }}"/>
+                                                <button type="submit" class="btn-product btn-cart"><span>Ajouter au panier</span></button>
+                                            </div><!-- End .product-action -->
+                                        </form>
                                     </div><!-- End .product-list-action -->
                                 </div><!-- End .col-sm-6 col-lg-3 -->
 
@@ -66,14 +75,7 @@
 
                                         <div class="product-nav product-nav-thumbs">
                                             <a href="#" class="active">
-                                                <img src="assets/images/products/product-4-thumb.jpg" alt="product desc">
-                                            </a>
-                                            <a href="#">
-                                                <img src="assets/images/products/product-4-2-thumb.jpg" alt="product desc">
-                                            </a>
-
-                                            <a href="#">
-                                                <img src="assets/images/products/product-4-3-thumb.jpg" alt="product desc">
+                                                <img src="{{ $product->photo }}" alt="{{ $product->title }}">
                                             </a>
                                         </div><!-- End .product-nav -->
                                     </div><!-- End .product-body -->

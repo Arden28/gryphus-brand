@@ -37,17 +37,17 @@
           </div>
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="photo">Photos</label>
-            <div class="col-sm-10">
-              <div class="input-group input-group-merge">
-                <input
-                  type="file"
-                  id="photo"
-                  class="form-control"
-                  multiple
-                  name="photos"
-                />
-                <x-input-error :messages="$errors->get('photos')" class="mt-2" />
+            <div class="col-sm-10"> <div class="input-group">
+                <span class="input-group-btn">
+                  <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                    <i class="fa fa-picture-o"></i> Choose
+                  </a>
+                </span>
+                <input id="thumbnail" class="form-control" type="text" name="photos">
               </div>
+              <img id="holder" style="margin-top:15px;max-height:100px;">
+
+                <x-input-error :messages="$errors->get('photos')" class="mt-2" />
               <div class="form-text">Vous pouvez charger max: 4 images. Dim: 300 x 300</div>
             </div>
           </div>
@@ -122,4 +122,11 @@
   </div>
 
 </div>
+@endsection
+
+@section('script')
+<script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
+<script>
+     $('#lfm').filemanager('image');
+</script>
 @endsection

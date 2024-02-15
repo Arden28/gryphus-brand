@@ -5,6 +5,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\Payment\PayPalController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\WishController;
 use App\Http\Controllers\WishlistController;
@@ -58,18 +59,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-Route::get('/payment/create', [PayPalController::class, 'createPayment'])->name('paypal.create');
-Route::get('/payment/success', [PayPalController::class, 'paymentSuccess'])->name('paypal.success');
-Route::get('/payment/cancel', [PayPalController::class, 'paymentCancel'])->name('paypal.cancel');
-Route::get('/payment/execute', [PayPalController::class, 'executePayment'])->name('paypal.execute');
-
-// Route::get('paypal-payment',[PayPalController::class,"payment"])->name('paypal.payment');
-// Route::get('paypal-success',[PayPalController::class,"success"])->name('paypal.success');
-// Route::get('paypal-cancel',[PayPalController::class,'cancel'])->name('paypal.cancel');
-
-// Route::get('handle-payment', [PayPalController::class, 'handlePayment'])->name('make.payment');
-// Route::get('cancel-payment', [PayPalController::class, 'paymentCancel'])->name('cancel.payment');
-// Route::get('payment-success', [PayPalController::class, 'paymentSuccess'])->name('success.payment');
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+// Stripe
+Route::get('/stripe', [PaymentController::class, 'stripe']);
+Route::post('/stripe', [PaymentController::class, 'stripePost'])->name('stripe.payment');
 
 require __DIR__.'/auth.php';

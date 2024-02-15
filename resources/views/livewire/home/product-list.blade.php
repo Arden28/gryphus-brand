@@ -39,18 +39,21 @@
                         <div class="product product-7 text-center">
                             <figure class="product-media">
                                 <a href="{{ route('product.show', $product->slug) }}">
-                                    <img src="{{ asset('assets/images/demos/demo-9/products/product-17.jpg')}}" alt="Product image" class="product-image">
-                                    <img src="{{ asset('assets/images/demos/demo-9/products/product-17.jpg')}}" alt="Product image" class="product-image-hover">
+                                    <img src="{{ url($product->photo)}}" alt="Product image" class="product-image">
                                 </a>
 
                                 <div class="product-action-vertical">
                                     <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>ajouter à la wishlist</span></a>
                                     <a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Aperçu rapide"><span>Aperçu rapide</span></a>
                                 </div><!-- End .product-action-vertical -->
+
+                                <form action="{{ route('cart.add') }}" method="post">
+                                    @csrf
                                     <div class="product-action">
-                                        <input type="hidden" name="product_id"/>
-                                        <button type="button" class="btn-product btn-cart"><span>Ajouter au panier</span></button>
+                                        <input type="hidden" name="product_id" value="{{ $product->id }}"/>
+                                        <button type="submit" class="btn-product btn-cart"><span>Ajouter au panier</span></button>
                                     </div><!-- End .product-action -->
+                                </form>
                             </figure><!-- End .product-media -->
 
                             <div class="product-body">
